@@ -1,0 +1,16 @@
+Transformar de # a cadena se suma '0'. add registro, '0'
+Transformar de cadena a # se resta '0', sub registro, '0'
+(se mueve 48 posiciones)
+
+Etiqueta no es una instruccion, permite ubicarnos en una posición de memoria, salto no condicional.
+_start: etiqueta de inicio de segmento de codigo
+
+salto condicional: jz, jg, jp, jm
+Loop: establecer ciclos
+Call: subrutinas
+je:  z=1 (cuando existe un cero)
+Cuando hay igualdad se activa la bandera del cero
+
+cmp: instruccion de comparación
+cpm opcion, 1
+ejemplo:
