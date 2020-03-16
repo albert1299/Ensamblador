@@ -9,7 +9,7 @@ section .data
 section .text
     global _start
 _start:
-    mov al, 4
+    mov al, 7
     mov bl, 6
     cmp al, bl
     jg mayor ;(zf = 0) (cf=0)

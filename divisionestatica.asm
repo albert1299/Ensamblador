@@ -10,10 +10,10 @@ section .data
     msj1 db "Operacion de división de 8 bits"
     len equ $ - msj1
 
-    msj2 db 10,"El cociente es:"
+    msj2 db 10,"El cociente es: "
     len2 equ $ - msj2
 
-    msj3 db 10,"El residuo es:"
+    msj3 db 10,"El residuo es: "
     len3 equ $ - msj3
 
     new_line db 10,""
@@ -29,8 +29,8 @@ section .text
 _start:
     
 
-    mov ax, 9
-    mov bl, 2
+    mov ax, 6
+    mov bl, 4
     div bl
     add al, '0'
     mov [cociente], al

@@ -1,3 +1,6 @@
+nasm -f elf times.asm
+./ejecutor.sh sumadinamica ; para ejecutar
+
 Transformar de # a cadena se suma '0'. add registro, '0'
 Transformar de cadena a # se resta '0', sub registro, '0'
 (se mueve 48 posiciones)
@@ -5,7 +8,7 @@ Transformar de cadena a # se resta '0', sub registro, '0'
 Etiqueta no es una instruccion, permite ubicarnos en una posición de memoria, salto no condicional.
 _start: etiqueta de inicio de segmento de codigo
 
-salto condicional: jz, jg, jp, jm
+salto condicional: jz, jg, jp, jm no altera banderas ni registros, hace comparacion
 
 je -> igualdad
 jz -> resultado cero
@@ -13,8 +16,8 @@ jmp -> salto sin condicion
 jg -> operando1 > operando2
 js -> singnal: 0=pl; 1=ng
 
-Loop: establecer ciclos
-Call: subrutinas
+Loop: establecer ciclos, instruccion que hace un salto a una posicion (eqtiqueta), altera el registro y bandera
+Call: permite saltos largos a diferentes segmentos, saltos a posicion en memoria (etiqueta), no altera registros ni banderas
 je:  z=1 (cuando existe un cero)
 Cuando hay igualdad se activa la bandera del cero
 
@@ -25,3 +28,23 @@ ejemplo:
 cmp(5,4) cf:0; zf:0
 cmp(4,5) cf:1; zf:0
 cmp(5,5) cf:0; zf:1
+
+pila: [40,44,48,52,56,60] posiciones esp(top)
+pila: [0,0,0,0,0,0]
+ax=2
+bx=6
+
+push ax 
+pila: [0,0,0,0,0,(2)]
+push bx 
+pila: [0,0,0,0,(6),2]
+pop dx 
+pila: [0,0,0,0,(6),2] > dx=6
+pila: [0,0,0,0,6,(2)] > 
+mov ax, [esp-4] > ax=6
+pila: [0,0,0,0,6,2] > dx=6
+
+
+Arreglos:
+si: inicio de Arreglos
+di: limite de Arreglos

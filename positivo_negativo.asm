@@ -1,7 +1,7 @@
 section .data
-    msj_negativo db "Es negativo", 10
+    msj_negativo db "El resultado de la resta es un número negativo", 10
     len_negativo equ $ - msj_negativo
-    msj_positivo db "Es positivo", 10
+    msj_positivo db "El resultado de la resta es un número positivo", 10
     len_positivo equ $ - msj_positivo
 
 section .bss
@@ -9,7 +9,7 @@ section .bss
 section .text
     global _start
 _start:
-    mov ax, 3
+    mov ax, 4
     mov bx, 6
     sub ax, bx
     js negativo
@@ -17,7 +17,7 @@ _start:
 
 negativo:
     mov eax, 4
-    mov ebx, 2
+    mov ebx, 1
     mov ecx, msj_negativo
     mov edx, len_negativo
     int 80h
@@ -25,7 +25,7 @@ negativo:
 
 positivo:
     mov eax, 4
-    mov ebx, 2
+    mov ebx, 1
     mov ecx, msj_positivo
     mov edx, len_positivo
     int 80h

@@ -25,13 +25,13 @@ section .data
 	mensaje db "El resultado de la suma es: "
 	len3 equ $-mensaje
 
-    mensaje2 db "El resutlado de la resta es: "
+    mensaje2 db "El resultado de la resta es: "
 	len4 equ $-mensaje2
 
-    mensaje3 db "El resutlado de la multiplicación es: "
+    mensaje3 db "El resultado de la multiplicación es: "
 	len5 equ $-mensaje3
 
-    mensaje4 db 10,"El resutlado de la división es: "
+    mensaje4 db 10,"El resultado de la división es: "
 	len6 equ $-mensaje4
 
     mensaje5 db "El residuo de la división es: "

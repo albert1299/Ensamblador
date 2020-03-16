@@ -16,16 +16,16 @@
 
 
 section .data
-    msj1 db 10,"Ingrese el primer número"
+    msj1 db 10,"Ingrese el primer número: "
 	len1 equ $ - msj1 
 
-	msj2 db "Ingrese el segundo número"
+	msj2 db "Ingrese el segundo número: "
 	len2 equ $ - msj2
 
-    msj3 db 10,"Número mayor"
+    msj3 db 10,"Número mayor",10
 	len3 equ $ - msj3 
 
-	msj4 db "Número menor"
+	msj4 db "Número menor",10
 	len4 equ $ - msj4
 
 section .bss

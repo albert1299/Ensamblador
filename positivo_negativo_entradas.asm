@@ -25,8 +25,8 @@ section .data
     len_positivo equ $ - msj_positivo
 
 section .bss
-    a resb 2
-    b resb 2
+    a resb 1
+    b resb 1
 
 section .text
     global _start
@@ -35,11 +35,11 @@ _start:
     leer a, 2
     escribir msj_2, len_msj_2
     leer b, 2
-    mov ax, [a]
-    sub ax, '0'
-    mov bx, [b]
-    sub bx, '0'
-    sub ax, bx
+    mov al, [a]
+    sub al, '0'
+    mov bl, [b]
+    sub bl, '0'
+    sub al, bl
     js negativo
     jmp positivo
 

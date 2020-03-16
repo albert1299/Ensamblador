@@ -9,7 +9,7 @@ section .bss
 section .text
     global _start
 _start:
-    mov cx, 9
+    mov cx, 10
 
 ciclo:
     cmp cx, 0
